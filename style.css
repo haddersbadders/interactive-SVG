@@ -1,0 +1,32 @@
+#stage {
+  width: 700px;
+  height: 140px;
+}
+#popupthing {
+  transform-origin: center;
+}
+
+#trigger1 {
+  transform-origin:  center;
+}
+
+
+[id$=thing] { /* Any element with an id that ends in "popup" */
+	transform: scale(0);
+}
+
+g:hover #trigger1  {
+  transform: scale(1.5, 1.5);
+}
+
+g:hover > [id$=thing] {
+  transform: scale(1);
+}
+
+[id$=thing], [id^=trigger] {
+  transition: transform 0.25s ease-in-out;
+}
+
+g:hover {
+  cursor: pointer;
+}
